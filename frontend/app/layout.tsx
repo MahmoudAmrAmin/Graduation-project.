@@ -29,6 +29,11 @@ export default function RootLayout({
       >
         {children}
       </body>
+      {/* <body className="min-h-screen bg-gradient-to-b from-[#0B1C2D] to-[#081625] text-white">
+  {children}
+</body> */}
+
+
     </html>
   );
 }
