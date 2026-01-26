@@ -66,6 +66,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
 import {
   FaBolt,
   FaChartLine,
@@ -93,15 +95,19 @@ export default function Home() {
         </ul>
 
         <div className="flex gap-6 text-sm">
+        <Link href="/auth/login">
           <button className="hover:text-cyan-400 transition">Login</button>
+          </Link>
+          <Link href="/auth/register">
           <button className="bg-cyan-400 text-black px-5 py-2 rounded-lg hover:bg-cyan-300 transition">
             Register
           </button>
+          </Link>
         </div>
       </nav>
 
       {/* ================= HERO ================= */}
-      <section className="px-[280px] pt-20 pb-32 grid grid-cols-2 gap-20 items-center">
+      <section className="min-h-screen grid pt-20 pb-32 grid-cols-1 md:grid-cols-2 bg-[#10223E] text-white">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -123,9 +129,11 @@ export default function Home() {
           </p>
 
           <div className="flex gap-6 mt-10">
+          <Link href="/auth/register">
             <button className="bg-cyan-400 text-black px-10 py-4 rounded-lg hover:scale-105 transition">
               Get Started
             </button>
+            </Link>
             <button className="border border-white/20 px-10 py-4 rounded-lg hover:border-cyan-400 transition">
               Subscribe
             </button>
@@ -137,19 +145,24 @@ export default function Home() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative h-[420px] rounded-2xl bg-[#0A1931] border border-white/10 flex items-center justify-center"
+          className="relative h-[420px] rounded-2xl bg-[#0A1931] border border-white/10 flex bg-[url('/landing-bg.png')] items-center justify-center bg-cover bg-center"
         >
           <span className="text-gray-500">Image Placeholder</span>
         </motion.div>
       </section>
 
       {/* ================= FEATURES ================= */}
-      <section className="px-[280px] py-32">
+      <section className="py-24 px-6 ">
+      <span className="text-center flex justify-center text-4xl font-bold mb-4 text-sm leading-5 tracking-[2.8px] text-center uppercase text-cyan-400">
+      The Optichain Advantage
+</span>
+
         <h2 className="text-center text-4xl font-bold mb-4">
           Redefining Global Trade
         </h2>
-        <p className="text-center text-gray-400 mb-20">
-          AI-driven solutions built for modern supply chains
+        <p className="mt-6 text-[18px] leading-[28px] text-center text-gray-300 max-w-xl mx-auto pb-14">
+        Our mission is to empower global trade through transparency, efficiency, and AI-
+        driven insights that matter.
         </p>
 
         <div className="grid grid-cols-3 gap-12">
@@ -184,9 +197,11 @@ export default function Home() {
           <p className="text-gray-400 mb-10">
             Join enterprises worldwide transforming logistics with AI.
           </p>
+          <Link href="/auth/register">
           <button className="bg-cyan-400 text-black px-12 py-4 rounded-lg hover:bg-cyan-300 transition">
             Get Started Now
           </button>
+          </Link>
         </motion.div>
       </section>
 
