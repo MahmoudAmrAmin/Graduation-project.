@@ -1,0 +1,20 @@
+# --- API & Server (for main.py) ---
+fastapi
+uvicorn
+pydantic
+
+# --- Data Manipulation ---
+pandas
+numpy
+
+# --- Visualization (for EDA.ipynb) ---
+matplotlib
+seaborn
+
+# --- Machine Learning & Preprocessing ---
+scikit-learn
+joblib
+
+# --- Deep Learning & Forecasting ---
+torch
+neuralforecast
