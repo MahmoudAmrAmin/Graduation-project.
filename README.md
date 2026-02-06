@@ -32,14 +32,21 @@ The project is built using a modern Data Science stack, leveraging the efficienc
 
 ## 📂 Repository Structure
 
-The project is organized into a clean 4-stage pipeline:
+The project is organized into a clean directory structure, isolating source code, data, and artifacts:
 
 ```text
-├── EDA.ipynb                         # 🔍 Step 1: Exploratory Data Analysis
-├── Feature_Engineering.ipynb         # ⚙️ Step 2: Preprocessing & Transformation
-├── Training_PatchTST.ipynb           # 🤖 Step 3: Model Training (PatchTST)
-├── Inference_and_Evaluation.ipynb    # 📊 Step 4: Inference, Benchmarking & Reporting
+├── Notebooks/
+│   ├── EDA.ipynb                         # 🔍 Step 1: Exploratory Data Analysis
+│   ├── Feature_Engineering.ipynb         # ⚙️ Step 2: Preprocessing & Transformation
+│   ├── Training_PatchTST.ipynb           # 🤖 Step 3: Model Training (PatchTST)
+│   └── Inference_and_Evaluation.ipynb    # 📊 Step 4: Inference, Benchmarking & Reporting
 ├── processed_data/
-│   └── modelled_dataset.csv          # 💾 The final preprocessed dataset used for modeling
-├── artifacts/                        # 📁 Saved Models and Scalers (.pkl)
-└── README.md                         # 📄 Project Documentation
+│   └── modelled_dataset.csv              # 💾 The final preprocessed dataset used for modeling
+├── artifacts/
+│   ├── scalers.pkl                       # ⚖️ Scaler objects for data normalization
+│   └── Production_model/                 # 🏭 Directory containing the trained PatchTST model
+│       ├── alias_to_model.pkl
+│       ├── configuration.pkl
+│       ├── dataset.pkl
+│       └── PatchTST_0.ckpt               # 🧠 The trained model checkpoints (weights)
+└── README.md                             # 📄 Project Documentation
