@@ -35,10 +35,11 @@ The project is built using a modern Data Science stack, leveraging the efficienc
 The project is organized into a clean 4-stage pipeline:
 
 ```text
-├── 01_EDA.ipynb                      # 🔍 Step 1: Exploratory Data Analysis
-├── 02_Feature_Engineering.ipynb      # ⚙️ Step 2: Preprocessing & Transformation
-├── 03_Training_PatchTST.ipynb        # 🤖 Step 3: Model Training (PatchTST)
-├── 04_Inference_and_Evaluation.ipynb # 📊 Step 4: Inference, Benchmarking & Reporting
-├── processed_data/                   # 📁 Contains modelled_dataset.csv
+├── EDA.ipynb                         # 🔍 Step 1: Exploratory Data Analysis
+├── Feature_Engineering.ipynb         # ⚙️ Step 2: Preprocessing & Transformation
+├── Training_PatchTST.ipynb           # 🤖 Step 3: Model Training (PatchTST)
+├── Inference_and_Evaluation.ipynb    # 📊 Step 4: Inference, Benchmarking & Reporting
+├── processed_data/
+│   └── modelled_dataset.csv          # 💾 The final preprocessed dataset used for modeling
 ├── artifacts/                        # 📁 Saved Models and Scalers (.pkl)
 └── README.md                         # 📄 Project Documentation
