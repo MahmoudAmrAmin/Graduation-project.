@@ -30,7 +30,7 @@ import {
             { month: "Nov", actual: 520, predicted: 500 },
             { month: "Dec", actual: 600, predicted: 580 },
         ],
-    Electronics: [
+    T_shirt: [
         { month: "Jul", actual: 420, predicted: 400 },
         { month: "Aug", actual: 500, predicted: 470 },
         { month: "Sep", actual: 610, predicted: 590 },
@@ -38,7 +38,7 @@ import {
         { month: "Nov", actual: 700, predicted: 670 },
         { month: "Dec", actual: 820, predicted: 780 },
     ],
-    "Industrial Parts": [
+    "Dress": [
         { month: "Jul", actual: 300, predicted: 280 },
         { month: "Aug", actual: 350, predicted: 340 },
         { month: "Sep", actual: 420, predicted: 410 },
@@ -46,7 +46,7 @@ import {
         { month: "Nov", actual: 520, predicted: 500 },
         { month: "Dec", actual: 600, predicted: 580 },
     ],
-    "Raw Materials": [
+    "Trousers": [
         { month: "Jul", actual: 200, predicted: 210 },
         { month: "Aug", actual: 260, predicted: 250 },
         { month: "Sep", actual: 310, predicted: 300 },
@@ -69,8 +69,9 @@ import {
             <div className="w-12 h-12 rounded-xl bg-cyan-500/20 flex items-center justify-center">
             <Truck className="text-cyan-400" />
             </div>
-
+            <a rel="stylesheet" href="/dashboard" >
             <SidebarIcon icon={<LayoutDashboard size={20} />} label="Dashboard" />
+            </a>
             <SidebarIcon icon={<Boxes size={20} />} label="Inventory" />
             <SidebarIcon icon={<BarChart3 size={20} />} label="Demand" active />
             <SidebarIcon icon={<Store size={20} />} label="Market" />
@@ -80,22 +81,8 @@ import {
 
         {/* Filter Panel */}
         <section className="w-[340px] bg-[#070F24] border-r border-white/10 p-6 flex flex-col">
-            <h2 className="text-xs tracking-widest text-white/50 mb-6 uppercase">
-            Filter Forecasting
-            </h2>
+ 
 
-            <div className="space-y-3">
-            {categories.map((cat) => (
-                <CategoryButton
-                key={cat}
-                title={cat}
-                active={selectedCategory === cat}
-                onClick={() => setSelectedCategory(cat)}
-                />
-            ))}
-            </div>
-
-            <hr className="border-white/10 my-8" />
 
             {/* Predictive Parameters */}
             <h2 className="text-xs tracking-widest text-white/50 mb-6 uppercase">

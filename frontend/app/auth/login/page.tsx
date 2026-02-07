@@ -261,9 +261,11 @@ bg-gradient-to-br from-[#0B1120]/80 via-[#0B1120]/40 to-cyan-400/20">
           </div>
 
           {/* Login Button */}
+          <a href="/dashboard">
           <button className="w-full bg-cyan-400 text-black py-3 rounded-lg font-medium hover:bg-cyan-300 hover:scale-[1.02] transition">
             Login →
           </button>
+          </a>
 
           {/* Divider */}
           <div className="flex items-center gap-4 my-6 text-gray-500 text-sm">

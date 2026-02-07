@@ -94,7 +94,7 @@ export default function Home() {
           <li className="hover:text-cyan-400 transition cursor-pointer">About</li>
         </ul>
 
-        <div className="flex gap-6 text-sm">
+        <div className="flex gap-6 items-center text-sm">
         <Link href="/auth/login">
           <button className="hover:text-cyan-400 transition">Login</button>
           </Link>
@@ -107,7 +107,7 @@ export default function Home() {
       </nav>
 
       {/* ================= HERO ================= */}
-      <section className="min-h-screen grid pt-20 pb-32 grid-cols-1 md:grid-cols-2 bg-[#10223E] text-white">
+      <section className="min-h-screen grid px-6 pt-20 pb-32 grid-cols-1 md:grid-cols-2 bg-[#10223E] text-white">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
